@@ -10,7 +10,7 @@
 
 ## NOTA: Como este curso es de fundamentos está dividido en varias carpetas, yo estaré creando apps por cada una de ellas, pondré el nombre de la app por sección.
 
-## Sección Users
+## Sección Users -- Introducción
 
 ### MODELOS
 * Los modelos son lo más imortante en nuestro web app. Son las tablas en la BD. La definición de como vamos a trabajar con esos datos.
@@ -62,9 +62,9 @@ Por ejemplo con estos meta datos estaría definiendo como ordenaría las página
 
 ![image](https://user-images.githubusercontent.com/84333525/140094150-d6f5e146-503a-4430-8c2a-e37134d7f676.png)
 
-## Sección Posts
+## Sección Posts -- QuerySets
 
-## MODELOS
+## MODELOS 
 * Creamos los 3 modelos Blog, Author, Entry, para poder estudiar las relaciones entre ellos y los querysets o sea CRUD.
 * Algo a tener encuenta y es bueno aprender es el shell de python, al caul podemos acceder de la siguiente manera *python manage.py shell* con este comando accedemos a la consola interctiva de python con la cual podemos probar cualquier acción realizada con objetos, CRUD.
  - Por ejemplo para crear y guardar un objeto de tipo Blog lo hacemos de la siguiente forma: *from posts.models import Blog* donde le estamos diciendo con que modelo vamos a estar trabajando.
@@ -185,5 +185,76 @@ Por ejemplo con estos meta datos estaría definiendo como ordenaría las página
 
 ![image](https://user-images.githubusercontent.com/84333525/140193429-51698b0d-d350-4ece-8a58-dde25d8995e1.png)
 
-## Encadenar filtros
+* Los filtros se pueden encadenar.
+
+### BUSQUEDA ESPECIFICA
+* Cunándo sabemos lo que estamos buscando en vez de usar un filtro podemos usar la función get:
+
+![image](https://user-images.githubusercontent.com/84333525/140318598-9fdbd7fe-1527-42a5-8c59-5fb5e7f22501.png)
+
+* Limitar Querset, esto se usa por ejemplo cuando hacemos un .all() retorna todos los objetos que tenemos guardados en la BD, lo cual pudiera ser un gran volumen de información por lo que podemos limitar haciendo un slicing de la siguiente forma
+
+![image](https://user-images.githubusercontent.com/84333525/140318978-c78754df-caba-4c5a-9675-550b8a4adc60.png)
+
+En el primer ejemplo solo quiero los 10 primeros elementos de la lista y en el segundo todos los que se encuentren en ese intervalo.
+
+### Field lookup (Búsqueda por campo)
+* El valor del campo debe ser igual a la búsqueda, ejemplos case sensitive y case no sensitive
+  
+  ![image](https://user-images.githubusercontent.com/84333525/140319752-8d99b5d0-803a-4a5e-8ff0-40f8c6213c73.png)
+
+* El valor de la búsqueda puede estar contenido en el valor del campo
+
+![image](https://user-images.githubusercontent.com/84333525/140320098-ac9d89f8-9a9e-4aaf-a367-c64b6357a4a4.png)
+
+* Búsqueda en campos que hacen referencias a otros modelos:
+
+![image](https://user-images.githubusercontent.com/84333525/140321858-4e99e4a8-e3e8-4c4e-bd9a-42e753222258.png)
+
+ * Imprimir todos los modelos en un ciclo
+
+![image](https://user-images.githubusercontent.com/84333525/140322710-d8d287d6-447b-470f-b117-435e8640d894.png)
+
+* Para consultas más complejas importamos el objeto Q de los modelos como veremos en el siguiente ejemplo:
+
+![image](https://user-images.githubusercontent.com/84333525/140323895-493f8f18-ea92-4bb5-8338-45a9192a22ec.png)
+
+En este caso estoy filtrando por la fecha
+
+* Encadenar búsquedas ejemplo:
+
+![image](https://user-images.githubusercontent.com/84333525/140325282-75f3d992-93b5-477e-a277-7ede939e78ed.png)
+
+En este caso le estoy diciendo que la fecha sea una de esas dos y además que cumpla con que el rating tiene que ser igual 7
+
+* MANY TO MANY. En este tipo de relaciones utilizmos *set* para obtener todas las relaciones
+
+![image](https://user-images.githubusercontent.com/84333525/140326290-2db4a3fd-e521-4c9c-b0ea-b302a33e0902.png)
+
+* Otra forma de hacer lo anterior es adicionando al campo many to many el related_name
+
+![image](https://user-images.githubusercontent.com/84333525/140327077-f6246999-ed02-499a-88e7-ac2ea7f5f398.png)
+
+![image](https://user-images.githubusercontent.com/84333525/140327413-b19d6933-e671-49df-bd89-92e6a7206e77.png)
+
+
+## Sección URLs
+* Los urls son los que nos permiten acceder a la información, extremadamente importantes, es a través de los urls que vamos a llamar a las funciones y la lógica de la app.
+* La configuración raíz de las urls se encuentra en el archivo settings.py en la variable **ROOT_URLCONF**
+* Si queremos utilizar expresiones regulares en las urls tenemos que importar re_path del módulo de urls de django.
+* Para incluir las urls definidas en las apps, importamos y usamos include.
+* Un ejemplo de url es la siguiente:
+  
+  ![image](https://user-images.githubusercontent.com/84333525/140335723-9f67ba13-a84e-4b0e-abed-8a08c75430c7.png
+  
+ - Tener en cuenta que lo que se encuentra entre brackets es lo que django puede obtener para realizar las operaciones.
+ - Señalo un ejemplo con slug porque es una manera más limpia de escribir un url.
+
+  ![image](https://user-images.githubusercontent.com/84333525/140338001-34107b37-b653-42fe-ab79-314b5072c794.png)
+
+* Ejemplo de url con expresiones regulares:
+
+![image](https://user-images.githubusercontent.com/84333525/140340812-29c9b221-d272-48d1-8137-f57f520a3eb9.png)
+
+
 
