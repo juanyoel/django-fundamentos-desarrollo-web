@@ -256,5 +256,27 @@ En este caso le estoy diciendo que la fecha sea una de esas dos y además que cu
 
 ![image](https://user-images.githubusercontent.com/84333525/140340812-29c9b221-d272-48d1-8137-f57f520a3eb9.png)
 
+* Ejemplo de función para redireccionar, en el método reverse el string que recibe como parámetros --> 'entries:entry-detail' la primera es el namespace utilizado en las urls del proyecto y la segunda palabra el name de la url en el archivo urls.py de la app.
+
+![image](https://user-images.githubusercontent.com/84333525/140400964-20f77b84-6c98-4237-bbaa-d3fb2806e8b0.png)
+
+* Notas: Recordar que en el archivo urls.py del proyecto es dónde ubicaremos los path principales de la app, dónde haciendo uso del include que debemos importar, podemos agregar las urls de las diferentes apps que vayamos creando. En el archivo urls.py de la app recordar que siemre debemos declarar la variable app_name = nombreApp, además en la lista urlpatterns agregaremos las diferentes urls de las vistas, que una url está definida en el siguiente formato primer parametro la prefijo de la url o sea /nombreUrl/, luego la vista o función a la que se está intentando acceder, y por último el name con el que la vamos a identificar ejemplo:
+
+![image](https://user-images.githubusercontent.com/84333525/140403221-90a55333-5335-4b18-83b7-bb0379d22805.png)
+
+## SECCION VISTAS
+* Partimos del concepto que las vistas son en sí la lógica que se va a ejecutar en el servidor para llevar a cabo una acción determinada, en este caso de ejemplos básicos lo estamos definiendo como funciones, pero normalmente las definimos como clases en dependencia de lo que se quiera, y dividimos en conceptos más completos como los ViewSet y ApiViews.
+* Nota: se pueden definir también handlers para los diferentes códigos de respuesta del servidor.
+
+![image](https://user-images.githubusercontent.com/84333525/140405913-53dbf3c7-f13a-42ff-938c-834d5ee95e06.png)
+
+![image](https://user-images.githubusercontent.com/84333525/140405951-99cbc49a-1056-444d-94fc-dfe36efa17a5.png)
+
+Tener en cuenta que de forma obligatoria siempre se le debe pasar el parámetro request a las funciones con las que se estén trabajando en las vistas.
+
+* Para servir una vista en Django, (aunque es lo que se usa) retornamos el método render que recibe 3 parámetros, el request, el archivo .html que se va a retornar y por último el contexto que es dónde se encuentra la info que se va a retornar al cliente.
+
+![image](https://user-images.githubusercontent.com/84333525/140412798-decf1da7-f4b6-4a58-98d5-2acb33078c1e.png)
+
 
 
