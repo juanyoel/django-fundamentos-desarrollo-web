@@ -278,5 +278,48 @@ Tener en cuenta que de forma obligatoria siempre se le debe pasar el parámetro 
 
 ![image](https://user-images.githubusercontent.com/84333525/140412798-decf1da7-f4b6-4a58-98d5-2acb33078c1e.png)
 
+* REDIRECT: también podemos redireccionar directamente.
+
+  ![image](https://user-images.githubusercontent.com/84333525/140513734-db4eca22-a7a6-4512-905e-6a6a4b1b179c.png)
+
+* Estos son los métodos más importantes de shortcuts
+
+![image](https://user-images.githubusercontent.com/84333525/140514883-c1478e32-6124-4911-bffa-a0f6089b4276.png)
+
+
+### VISTAS BASADAS EN CLASES
+* Ya tieniendo la idea bastante clara de como funcionan las vistas, pasamos a ver las vistas basadas en clases.
+* Una vista basada en clases nos permite acceder a nuestros códigos a través de funciones
+* Para crear una vista basada en clases básica primero hacemos las importaciones necesarias, creamos la clase, recordar que siepre que trabajamos con clases a los métodos que se creen dentro de la misma hay que pasarle self como parámetro, hay que poner a heredar la clase creada de la clase que hayamos importado.
+
+![image](https://user-images.githubusercontent.com/84333525/140516026-fc9b3a4d-cd26-4306-b85e-336df8650e27.png)
+
+![image](https://user-images.githubusercontent.com/84333525/140516051-0be8be27-49ac-4f01-b478-0df326cd4163.png)
+
+### Vistas GENERICAS
+* Las vistas genericas vienen con django para funciones específicas.
+* ListView: renderiza una lista de objetos, basado en self.models
+
+![image](https://user-images.githubusercontent.com/84333525/140516825-ae8117d5-91bb-4af4-8382-bcbcdb8bd3b5.png)
+
+![image](https://user-images.githubusercontent.com/84333525/140519288-a39a022d-8f02-4284-85cf-86c651b9faef.png)
+
+En el caso de las listas esperan un modelo en el ejemplo anterior le pasamos Entry que es uno de los modelos que tenemos de ejemplo, más adelante en el curso se estará profundizando en el trabajo condatos reales.
+
+### PLANTILLAS
+* Para este momento el trabajo con las plantillas no es de prioridad, pero si que quiero aprenderlo bien, por lo que dejo el tiempo del curso en el que se habla sobre el tema:
+  2H:20M
+* Filtros que se pueden emplear cuando se trabaja con plantillas, me parece interesante y a tener en cuenta si lo necesito en fututros proyectos.
+
+![image](https://user-images.githubusercontent.com/84333525/140524036-0da99ad5-469d-4405-944f-aa04fd0bfb63.png)
+
+### FORMULARIOS
+* Los formularios caen en el mismo punto anterior, me parece interesante pero no es mi prioridad en estos momentos, dejo tiempo para en casa de ser necesario revisar el curso nuevamente 2H:29M
+* Para crear formularios, creamos el archivo *forms.py* y definimos nuestros formularios como clases, recordar que es a partir de los modelos que ya tenemos definidos.
+
+![image](https://user-images.githubusercontent.com/84333525/140525376-c29261da-cc5f-40da-8836-f619b390dca1.png)
+
+En el caso del ejemplo anterior es para visualizar las dos formas en las que podemos definir los formularios, ambas hasta donde entiendo hacen exactamente lo mismo
+
 
 
