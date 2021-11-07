@@ -321,5 +321,55 @@ En el caso de las listas esperan un modelo en el ejemplo anterior le pasamos Ent
 
 En el caso del ejemplo anterior es para visualizar las dos formas en las que podemos definir los formularios, ambas hasta donde entiendo hacen exactamente lo mismo
 
+* En las vitas para la primera forma podemos trabajar con los datos de la siguiente forma
 
+![image](https://user-images.githubusercontent.com/84333525/140622093-9b094c95-5d27-4b62-80de-bca119369d2c.png)
 
+* Para la segunda debemos trabajar en la vista de la siguiente manera
+
+![image](https://user-images.githubusercontent.com/84333525/140622228-c97afed8-35ea-48bc-85d8-b02efb6f06ce.png)
+
+En lo personal creo que mucho más práctico
+
+### IMAGENES
+* Para trabajar con imágenes debemos tener instalado el paquete Pillow
+* Recordar que siempre que trabajamos con modelos se deben crear y correr las migraciones, por otra parte el campos de imagen es el siguiente:
+
+![image](https://user-images.githubusercontent.com/84333525/140622318-10d93f11-4d8c-4a9a-b4b6-221309b00b40.png)
+
+* Una buena práctica cuando ya habíamos trabajado con un tipo de modelos en la BD y le adicionamos un campo nuevo es en caso de que se pueda especificarle que puede ser null y estar vacío de la siguiente forma
+
+![image](https://user-images.githubusercontent.com/84333525/140622360-c3b54017-64ca-4e68-befb-08c2546807ad.png)
+
+* Mostrar imagnes
+  - En el html vinculamos de la siguiente manera
+    
+    ![image](https://user-images.githubusercontent.com/84333525/140622669-357ab368-2942-437c-a3a4-5e03fc5213f6.png)
+
+ - Creamos una carpeta static
+ - En las urls del proyecto adicionamos los archivos staticos como muestro a continuación
+
+![image](https://user-images.githubusercontent.com/84333525/140623009-06d18905-781f-43c6-9d67-3eb6749b0b23.png)
+
+- En la configuración adicionamos las siguientes variables
+  
+  ![image](https://user-images.githubusercontent.com/84333525/140623046-2227cce7-6cc8-4406-a21d-20f7fdada738.png)
+
+Se le debe agregar el siguiente código a la vista
+
+  ![image](https://user-images.githubusercontent.com/84333525/140623060-753ae41d-660a-4c14-a5bf-cf5105be4068.png)
+
+* Lo relacionado con las imágenes se encuentra en el siguiente ejemplo del curso 2H50M
+
+## FORMULARIOS TRABAJADOS EN CLASS VIEWS
+* Los ejemplo anteriores son utilizando funciones, a continuación utilizaremos clases
+
+![image](https://user-images.githubusercontent.com/84333525/140627809-388580d1-ff41-4281-a7f4-41a2c2c6a78e.png)
+
+* Para lo anterior hacemos la siguiente importación
+
+![image](https://user-images.githubusercontent.com/84333525/140627814-d009c378-580b-4af5-9b80-cdf2b3e1ff99.png)
+
+* Por último modificamos el archivo *urls.py*
+
+![image](https://user-images.githubusercontent.com/84333525/140627839-fc154af9-fb79-443f-843a-47e6372b51b8.png)
